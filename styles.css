@@ -1,0 +1,79 @@
+@font-face{
+    font-family: Lilian;
+    src:url(src/fonts/Lilian.ttf);
+}
+
+:root {
+   --green: #788374;
+   --yellow: #f5e9bf;
+   --orange: #aa644d;
+   --darkPurple: #372a39;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: var(--darkPurple)
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    white-space: nowrap;
+}
+
+header {
+    background-color: var(--yellow);
+    height: 15%;
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: center;
+
+    border-bottom-style: solid;
+    border-bottom-color: var(--orange);
+    border-bottom-width: 8px;
+}
+
+.headerName {
+    font-family: Lilian;
+    font-size: 450%;
+    color: var(--orange);
+    text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-decoration-thickness: 5px;
+}
+
+.headerTitle {
+    font-family: Lilian;
+    font-size: 250%;
+    color: var(--green);
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+    text-decoration-thickness: 5px;
+}
+
+.headerButtons button {
+    min-width: 128px;
+    min-height: 128px;
+    width: 10%;
+    height: 10%;
+    aspect-ratio: 1/1;
+    border: none;
+    background-image: none;
+}
+
+.headerButtons button:hover {
+    filter: brightness(95%);
+}
+
+.buttonDivider {
+    width: 5px;
+    height: auto;
+    display: inline-block;
+}
