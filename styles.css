@@ -38,6 +38,9 @@ header {
     border-bottom-style: solid;
     border-bottom-color: var(--orange);
     border-bottom-width: 8px;
+
+    transform: translateY(0%);
+    transition: 0s ease-in;
 }
 
 .headerName {
@@ -47,6 +50,14 @@ header {
     text-decoration: underline;
     text-decoration-color: var(--green);
     text-decoration-thickness: 5px;
+
+    transition: .5s ease-in-out;
+
+    user-select: none;
+}
+
+.headerName:hover {
+    transform:scale(1.05);  
 }
 
 .headerTitle {
@@ -56,6 +67,20 @@ header {
     text-decoration: underline;
     text-decoration-color: var(--orange);
     text-decoration-thickness: 5px;
+
+    transition: .5s ease-in-out;
+
+    user-select: none;
+}
+
+.headerTitle:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
+.headerTitle:active {
+    transform: scale(0);
+    transition: all .1s;
 }
 
 .headerButtons button {
@@ -66,10 +91,13 @@ header {
     aspect-ratio: 1/1;
     border: none;
     background-image: none;
+
+    transition: .5s ease-in-out;
 }
 
 .headerButtons button:hover {
-    filter: brightness(95%);
+    transform: scale(1.05);
+    transition: all .5s;
 }
 
 .buttonDivider {
