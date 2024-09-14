@@ -17,13 +17,17 @@
 
 html, body {
     background-color: var(--darkDarkPurple);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* prevents horizontal scrolling */
+    overflow-y: auto;
 }
 
 #wrapper {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    white-space: nowrap;
 }
 
 header {
@@ -80,9 +84,6 @@ header {
     border-radius: 8px;
     background: none;
     background-size: contain;
-
-
-
     transition: .5s ease-in-out;
 
 }
@@ -141,4 +142,20 @@ header {
 #menuCloseButton:hover {
     transform:scale(1.05);
     transition: all 0.5s;
+}
+
+#personalPicture {
+
+    /* dimensions */
+    width: 500px;
+    height: 450px;
+
+    /* positioning */
+    position: relative;
+    left: 200px;
+    top: 75px;
+
+    /* appearance toggles */
+    border-radius: 10px;
+    border: 2px solid var(--lightGray);
 }
