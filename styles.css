@@ -1,13 +1,13 @@
 @font-face{
-    font-family: Lilian;
-    src:url(src/fonts/Lilian.ttf);
+    font-family: Nunito;
+    src:url(src/fonts/Nunito-VariableFont_wght.ttf);
 }
 
 :root {
-   --green: #788374;
-   --yellow: #f5e9bf;
-   --orange: #aa644d;
-   --darkPurple: #372a39;
+   --lightGray: #d3d3d3;
+   --darkGray: #242526;
+   --darkPurple: #150324;
+   --darkDarkPurple: #0c0214;
 }
 
 * {
@@ -16,7 +16,7 @@
 }
 
 html, body {
-    background-color: var(--darkPurple)
+    background-color: var(--darkDarkPurple);
 }
 
 #wrapper {
@@ -27,81 +27,118 @@ html, body {
 }
 
 header {
-    background-color: var(--yellow);
+    background-color: var(--darkPurple);
     height: 15%;
-    
+
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 1rem;
     align-items: center;
 
     border-bottom-style: solid;
-    border-bottom-color: var(--orange);
-    border-bottom-width: 8px;
+    border-bottom-color: var(--lightGray);
+    border-bottom-width: 2px;
 
     transform: translateY(0%);
     transition: 0s ease-in;
 }
 
 .headerName {
-    font-family: Lilian;
-    font-size: 450%;
-    color: var(--orange);
-    text-decoration: underline;
-    text-decoration-color: var(--green);
-    text-decoration-thickness: 5px;
 
+    /* dimensions */
+    font-size: 4rem;
+
+    /* positioning */
+    padding-left: 25px;
+
+    /* appearance */
+    font-family: Nunito;
+    font-weight: bold;
+    color: var(--lightGray);
     transition: .5s ease-in-out;
 
     user-select: none;
 }
-
 .headerName:hover {
-    transform:scale(1.05);  
-}
-
-.headerTitle {
-    font-family: Lilian;
-    font-size: 250%;
-    color: var(--green);
-    text-decoration: underline;
-    text-decoration-color: var(--orange);
-    text-decoration-thickness: 5px;
-
-    transition: .5s ease-in-out;
-
-    user-select: none;
-}
-
-.headerTitle:hover {
-    transform: scale(1.1);
-    transition: all .5s;
-}
-
-.headerTitle:active {
-    transform: scale(0);
-    transition: all .1s;
+    transform:scale(1.05);
 }
 
 .headerButtons button {
-    min-width: 128px;
-    min-height: 128px;
+
+    /* dimensions */
+    min-width: 64px;
+    min-height: 64px;
     width: 10%;
     height: 10%;
     aspect-ratio: 1/1;
+
+    /* positioning */
+    margin-left: 10px;
+
+    /* appearance toggles */
     border: none;
-    background-image: none;
+    border-radius: 8px;
+    background: none;
+    background-size: contain;
+
+
 
     transition: .5s ease-in-out;
-}
 
+}
 .headerButtons button:hover {
     transform: scale(1.05);
     transition: all .5s;
 }
 
-.buttonDivider {
-    width: 5px;
-    height: auto;
-    display: inline-block;
+.hiddenMenu {
+    background-color: var(--lightGray);
+
+    /* dimensions */
+    min-width: 200px;
+    min-height: 200px;
+    width: 250px;
+    height: 250px;
+
+    /* positioning + visibility */
+    position: absolute;
+    margin-top: 185px;
+    right: 15px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    /* appearance toggles */
+    border-radius: 8px;
+    font-family: Nunito;
+    transition: ease-in-out all 0.25s;
+}
+.hiddenMenu.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#menuCloseButton {
+    /* dimensions */
+    min-width: 25px;
+    min-height: 25px;
+    width: 25px;
+    height: 25px;
+    aspect-ratio: 1/1;
+
+    /* positioning */
+    position: fixed;
+    right: 1.5rem;
+    top: 3rem;
+
+    /* appearance toggles */
+    border-radius: 4px;
+    border: none;
+    background: none;
+    color: inherit;
+    background-size: cover;
+}
+#menuCloseButton:hover {
+    transform:scale(1.05);
+    transition: all 0.5s;
 }
