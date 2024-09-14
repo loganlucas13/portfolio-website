@@ -64,7 +64,7 @@ header {
     user-select: none;
 }
 .headerName:hover {
-    transform:scale(1.05);
+    transform: scale(1.05);
 }
 
 .headerButtons button {
@@ -140,7 +140,7 @@ header {
     background-size: cover;
 }
 #menuCloseButton:hover {
-    transform:scale(1.05);
+    transform: scale(1.05);
     transition: all 0.5s;
 }
 
@@ -158,4 +158,8 @@ header {
     /* appearance toggles */
     border-radius: 10px;
     border: 2px solid var(--lightGray);
+    transition: ease-in-out 0.5s;
+}
+#personalPicture:hover {
+    transform: scale(1.01);
 }
