@@ -6,29 +6,93 @@
         <script src="main.js"></script>
     </head>
 
-    <div id="wrapper">
-        <header>
-            <div class="headerName">
-                <p> Logan Lucas </p>
-            </div>
+    <header>
+        <div class="headerName">
+            <p><mark class="green">Logan Lucas</mark></p>
+        </div>
 
-            <div class="headerButtons">
-                <a href="https://www.linkedin.com/in/loganlucas13/" target="_blank">
-                    <button id="linkedinButton" style ="background-image:url(src/images/icons/linkedin_white.png)"></button>
-                </a>
-                <a href="https://www.github.com/loganlucas13/" target="_blank">
-                    <button id="githubButton" style ="background-image:url(src/images/icons/github_white.png)"></button>
-                </a>
-                <button id="menuButton" style ="background-image:url(src/images/icons/settings_white.png)" onclick="toggleSettings()"></button>
-            </div>
-            <div class ="hiddenMenu">
-                <button id="menuCloseButton" style = "background-image:url(src/images/icons/close_menu_icon.png)" onclick="toggleSettings()"></button>
-            </div>
-        </header>
+        <div class="headerButtons">
+            <a href="https://www.linkedin.com/in/loganlucas13/" target="_blank">
+                <button id="linkedinButton" style="background-image:url(src/images/icons/linkedin_white.png)"></button>
+            </a>
+            <a href="https://www.github.com/loganlucas13/" target="_blank">
+                <button id="githubButton" style="background-image:url(src/images/icons/github_white.png)"></button>
+            </a>
+            <button id="menuButton" style="background-image:url(src/images/icons/settings_white.png)" onclick="toggleSettings()"></button>
+        </div>
+        <div class="hiddenMenu">
+            <button id="menuCloseButton" onclick="toggleSettings()"></button>
+        </div>
+    </header>
 
-        <body>
-            <img id="personalPicture" src="src/images/pictures/uic_campus.jpg">
+    <div id="introWrapper">
+            <img id="personalPicture" src="src/images/pictures/headshot.png">
+
+            <div class="groupedBody">
+                <div class="titleBox">
+                    <h1>Hello, my name is <mark class="green">Logan</mark>!</h1>
+                </div>
+                <div class="textBox">
+                    <p>I'm a current <mark class="yellow">Junior</mark> at the <mark class="blue">University of Illinois Chicago</mark> studying <mark class="purple">Computer Science</mark>.</p>
+                    &nbsp;
+                    <p>Below you can find some of my projects and some more information about me!</p>
+                </div>
+                <div class="arrowDown">
+                    <button style="background-image:url(src/images/icons/caret_lightGray.svg)" onclick="document.getElementById('aboutMeWrapper').scrollIntoView({block: 'center'});"></button>
+                </div>
+            </div>
         </body>
     </div>
 
+    <div id="aboutMeWrapper">
+        <div class="groupedBody">
+            <div class="titleBox">
+                <h1> About Me! </h1>
+            </div>
+            <div class="textBox">
+                <p>
+                    Good to see you here! As I said before, I am currently at the <mark class="blue">University of Illinois Chicago (UIC)</mark> as
+                    a <mark class="purple">Computer Science</mark> major! I originally grew up on a farm two-ish hours south of Chicago, but I decided
+                    to move here to get a change of pace!
+                </p>
+                &nbsp;
+                <p>
+                    My main interest software development-wise is in <mark class="yellow">full-stack
+                    development</mark>, which I'm spending more time with to gain experience. I think my love for creating things
+                    came from my childhood (and current if I'm being completely honest) obsession with LEGO and Minecraft!
+                </p>
+                &nbsp;
+                <p>
+                    In my free time, I usually either find a relaxing game to play, code, or play with my cat Miso, who you
+                    can see on the right!
+                </p>
+                &nbsp;
+                <p>
+                    Currently, I'm looking for an <mark class="green">internship</mark> for the <mark class="green">Summer of 2025</mark>. If you're interested, please take a look at
+                    my resume on the right. Thank you so much for reading and I hope to connect with you soon!
+                </p>
+            </div>
+            <div class="arrowDown">
+                <button style="background-image:url(src/images/icons/caret_lightGray.svg)" onclick="document.getElementById('footer').scrollIntoView();"></button>
+            </div>
+        </div>
+        <div class="groupedBody">
+            <img id="misoPicture" src="src/images/pictures/miso.jpeg">
+            <div id="resumeContainer">
+                <a href="src/documents/Logan_Lucas_Resume_2024.pdf" target="_blank">
+                    <button id="resumeButton">Click <mark class="greenBoldUnderlined">here</mark> for my resume!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectsWrapper">
+
+    </div>
+
+    <footer id = "footer">
+        <div class="footerName">
+            <p><mark class="green">Logan Lucas</mark></p>
+        </div>
+    </footer>
 </html>

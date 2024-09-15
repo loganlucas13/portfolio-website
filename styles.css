@@ -5,39 +5,58 @@
 
 :root {
    --lightGray: #d3d3d3;
+   --backgroundGray: #2e323a;
    --darkGray: #242526;
+   --codeEditorGray: #262930;
    --darkPurple: #150324;
    --darkDarkPurple: #0c0214;
+   --lightLightBlue: #b6c7da;
+   --seaGreen: #64bfb6;
+   --lightLightRed: #ed6a5e;
+   --lightRed: #c2453b;
+   --lightYellow: #c5c598;
+   --lightBlue: #60b7d5;
+   --lightPurple: #bc94d6;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
-    background-color: var(--darkDarkPurple);
+    background-color: var(--backgroundGray);
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     overflow-x: hidden; /* prevents horizontal scrolling */
     overflow-y: auto;
+    scroll-behavior: smooth;
+    background: repeating-linear-gradient(-45deg, var(--backgroundGray) 0px, var(--codeEditorGray) 5px, var(--backgroundGray) 6px, var(--codeEditorGray) 11px);
 }
 
-#wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+#introWrapper {
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
-    background-color: var(--darkPurple);
+    background-color: var(--codeEditorGray);
     height: 15%;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     align-items: center;
+    z-index: 99;
 
     border-bottom-style: solid;
     border-bottom-color: var(--lightGray);
@@ -64,7 +83,7 @@ header {
     user-select: none;
 }
 .headerName:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .headerButtons button {
@@ -85,32 +104,33 @@ header {
     background: none;
     background-size: contain;
     transition: .5s ease-in-out;
-
 }
 .headerButtons button:hover {
     transform: scale(1.05);
-    transition: all .5s;
+    cursor: pointer;
 }
 
 .hiddenMenu {
-    background-color: var(--lightGray);
+    background-color: var(--codeEditorGray);
 
     /* dimensions */
     min-width: 200px;
-    min-height: 200px;
+    min-height: 100px;
     width: 250px;
-    height: 250px;
+    height: 100px;
 
     /* positioning + visibility */
     position: absolute;
-    margin-top: 170px;
+    margin-top: 0px;
     right: 15px;
 
     visibility: hidden;
     opacity: 0;
+    z-index: 99;
 
     /* appearance toggles */
     border-radius: 8px;
+    border: 2px solid var(--lightGray);
     font-family: Nunito;
     transition: ease-in-out all 0.25s;
 }
@@ -128,32 +148,31 @@ header {
     aspect-ratio: 1/1;
 
     /* positioning */
-    position: fixed;
-    right: 1.5rem;
-    top: 3rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 
     /* appearance toggles */
-    border-radius: 4px;
-    border: none;
-    background: none;
+    border-radius: 32px;
+    border: 1.5px solid var(--lightRed);
+    background-color: var(--lightLightRed);
     color: inherit;
     background-size: cover;
+    transition: 0.5s ease-in-out;
 }
 #menuCloseButton:hover {
-    transform: scale(1.05);
-    transition: all 0.5s;
+    transform: scale(0.95);
+    cursor: pointer;
 }
 
 #personalPicture {
 
     /* dimensions */
-    width: 500px;
-    height: 450px;
+    max-width: 400px;
+
 
     /* positioning */
-    position: relative;
-    left: 200px;
-    top: 75px;
+    margin: 20px;
 
     /* appearance toggles */
     border-radius: 10px;
@@ -162,4 +181,164 @@ header {
 }
 #personalPicture:hover {
     transform: scale(1.01);
+}
+
+.titleBox {
+
+    /* dimensions */
+    max-width: fit-content;
+    padding: 10px;
+
+    /* positioning */
+    margin: 30px;
+    margin-inline: auto;
+
+    /* appearance toggles */
+    background-color: var(--codeEditorGray);
+    border-radius: 10px;
+    border: 2px solid var(--lightGray);
+    font-family: Nunito;
+    color: var(--lightLightBlue);
+    text-align: center;
+    transition: ease-in-out 0.5s;
+    user-select: none;
+}
+.titleBox:hover {
+    transform: scale(1.01);
+}
+
+.textBox {
+
+    /* dimensions */
+    min-width: fit-content;
+    max-width: 750px;
+    padding: 10px;
+
+    /* positioning */
+    margin: 30px;
+
+    /* appearance toggles */
+    background-color: var(--codeEditorGray);
+    border-radius: 10px;
+    border: 2px solid var(--lightGray);
+    font-family: Nunito;
+    color: var(--lightLightBlue);
+    text-align: center;
+    transition: ease-in-out 0.5s;
+    user-select: none;
+
+}
+.textBox:hover {
+    transform: scale(1.01);
+}
+
+mark {
+    background: none;
+}
+mark.green {
+    color: var(--seaGreen);
+}
+mark.yellow {
+    color: var(--lightYellow);
+}
+mark.blue {
+    color: var(--lightBlue);
+}
+mark.purple {
+    color: var(--lightPurple);
+}
+mark.greenBoldUnderlined {
+    color: var(--seaGreen);
+    font-weight: bold;
+    text-decoration: 2px underline;
+}
+
+.arrowDown {
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    text-align: center;
+
+}
+.arrowDown button {
+    background-size: contain;
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-top: 30px;
+    transition: ease-in-out 0.5s;
+}
+.arrowDown button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#aboutMeWrapper {
+    margin-top: 250px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#misoPicture {
+    /* dimensions */
+    max-width: 300px;
+
+    /* positioning */
+    margin: 20px;
+
+    /* appearance toggles */
+    transition: ease-in-out 0.5s;
+    border-radius: 10px;
+    border: 2px solid var(--lightGray);
+}
+#misoPicture:hover {
+    transform: scale(1.01);
+}
+
+#resumeContainer {
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    text-align: center;
+}
+
+#resumeButton {
+    width: 250px;
+    height: 100px;
+
+    background-color: var(--codeEditorGray);
+    border-radius: 8px;
+    border: 2px solid var(--lightGray);
+
+    font-family: Nunito;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--lightLightBlue);
+    transition: ease-in-out 0.5s;
+}
+#resumeButton:hover {
+    transform: scale(1.01)
+}
+
+#projectsWrapper {
+    margin-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    margin-top: 500px;
+
+    height: 15%;
 }
