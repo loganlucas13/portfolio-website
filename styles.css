@@ -39,7 +39,8 @@ html, body {
 
 #introWrapper {
     display: flex;
-    margin-top: 35px;
+    margin-top: 5%;
+    margin-bottom: 7.5%;
     align-items: center;
     justify-content: center;
 }
@@ -89,14 +90,15 @@ header {
 .headerButtons button {
 
     /* dimensions */
-    min-width: 64px;
-    min-height: 64px;
-    width: 10%;
-    height: 10%;
+    min-width: 10px;
+    min-height: 10px;
+    width: 75px;
+    height: 75px;
     aspect-ratio: 1/1;
 
     /* positioning */
-    margin-left: 10px;
+    justify-content: space-between;
+    margin: 0;
 
     /* appearance toggles */
     border: none;
@@ -108,6 +110,10 @@ header {
 .headerButtons button:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.headerButtons a {
+    display: inline-block;
 }
 
 .hiddenMenu {
@@ -222,6 +228,7 @@ header {
     border-radius: 10px;
     border: 2px solid var(--lightGray);
     font-family: Nunito;
+    font-size: 1.5rem;
     color: var(--lightLightBlue);
     text-align: center;
     transition: ease-in-out 0.5s;
@@ -277,8 +284,8 @@ mark.greenBoldUnderlined {
 }
 
 #aboutMeWrapper {
-    margin-top: 250px;
-    margin-bottom: 30px;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -322,14 +329,38 @@ mark.greenBoldUnderlined {
     transition: ease-in-out 0.5s;
 }
 #resumeButton:hover {
-    transform: scale(1.01)
+    transform: scale(1.01);
+    cursor: pointer;
 }
 
 #projectsWrapper {
-    margin-top: 250px;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+#projectBoxes {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    height: 10rem;
+    width: 25%;
+    margin: 30px;
+    background-color: var(--codeEditorGray);
+    border-radius: 10px;
+    border: 2px solid var(--lightGray);
+    display: inline-block;
+    transition: ease-in-out 0.5s;
+}
+.project:hover {
+    transform: scale(1.01);
 }
 
 footer {
