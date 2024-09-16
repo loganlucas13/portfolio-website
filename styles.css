@@ -73,7 +73,7 @@ header {
     font-size: 4rem;
 
     /* positioning */
-    padding-left: 25px;
+    padding-left: 1rem;
 
     /* appearance */
     font-family: Nunito;
@@ -87,7 +87,7 @@ header {
     transform: scale(1.01);
 }
 
-.headerButtons button {
+.buttonGroup button {
 
     /* dimensions */
     min-width: 10px;
@@ -107,13 +107,25 @@ header {
     background-size: contain;
     transition: .5s ease-in-out;
 }
-.headerButtons button:hover {
+.buttonGroup button:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
 
-.headerButtons a {
+.buttonGroup a {
     display: inline-block;
+}
+
+#mailButton {
+    height: 90px;
+    width: 90px;
+}
+
+#menuButton {
+    transition: ease-in-out 0.5s;
+}
+#menuButton.active {
+    transform: rotate(45deg);
 }
 
 .hiddenMenu {
@@ -123,12 +135,12 @@ header {
     min-width: 200px;
     min-height: 100px;
     width: 250px;
-    height: 100px;
+    height: 250px;
 
     /* positioning + visibility */
     position: absolute;
-    margin-top: 0px;
-    right: 15px;
+    margin-top: 20%;
+    right: 25px;
 
     visibility: hidden;
     opacity: 0;
@@ -138,7 +150,7 @@ header {
     border-radius: 8px;
     border: 2px solid var(--lightGray);
     font-family: Nunito;
-    transition: ease-in-out all 0.25s;
+    transition: ease-in-out 0.2s;
 }
 .hiddenMenu.active {
     visibility: visible;
@@ -260,14 +272,14 @@ mark.greenBoldUnderlined {
     text-decoration: 2px underline;
 }
 
-.arrowDown {
+.arrow {
     justify-content: center;
     align-items: center;
     margin-inline: auto;
     text-align: center;
 
 }
-.arrowDown button {
+.arrow button {
     background-size: contain;
     border: none;
     background: none;
@@ -275,10 +287,10 @@ mark.greenBoldUnderlined {
     background-size: cover;
     height: 50px;
     width: 50px;
-    margin-top: 30px;
+    margin-top: 20px;
     transition: ease-in-out 0.5s;
 }
-.arrowDown button:hover {
+.arrow button:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -305,6 +317,7 @@ mark.greenBoldUnderlined {
 }
 #misoPicture:hover {
     transform: scale(1.01);
+    cursor: pointer;
 }
 
 #resumeContainer {
@@ -350,7 +363,7 @@ mark.greenBoldUnderlined {
 }
 
 .project {
-    height: 10rem;
+    height: 20rem;
     width: 25%;
     margin: 30px;
     background-color: var(--codeEditorGray);
@@ -369,7 +382,47 @@ footer {
     left: 0px;
     right: 0px;
 
+    display: flex;
     margin-top: 500px;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
 
-    height: 15%;
+    height: 20%;
+    background-color: var(--codeEditorGray);
+    border-top: 2px solid var(--lightGray);
+    font-family: Nunito;
+}
+
+.footerButtons button {
+    min-width: 10px;
+    min-height: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+.textBoxNoBackground {
+    /* dimensions */
+    min-width: fit-content;
+    max-width: 225px;
+    padding: 10px;
+
+    /* positioning */
+    margin-right: 30px;
+
+    /* appearance toggles */
+    font-family: Nunito;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--lightLightBlue);
+    text-align: center;
+    transition: ease-in-out 0.5s;
+    user-select: none;
+}
+
+#rightHalfFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

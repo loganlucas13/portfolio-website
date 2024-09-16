@@ -6,17 +6,20 @@
         <script src="main.js"></script>
     </head>
 
-    <header>
+    <header id="header">
         <div class="headerName">
             <p><mark class="green">Logan Lucas</mark></p>
         </div>
 
-        <div class="headerButtons">
+        <div class="buttonGroup">
+            <a href="mailto:loganlucas2004@gmail.com" target="_blank">
+                <button id="mailButton" style="background-image:url(src/images/icons/mail_white.svg)"></button>
+            </a>
             <a href="https://www.linkedin.com/in/loganlucas13/" target="_blank">
-                <button id="linkedinButton" style="background-image:url(src/images/icons/linkedin_white.svg)"></button>
+                <button class="linkedinButton" style="background-image:url(src/images/icons/linkedin_white.svg)"></button>
             </a>
             <a href="https://www.github.com/loganlucas13/" target="_blank">
-                <button id="githubButton" style="background-image:url(src/images/icons/github_white.svg)"></button>
+                <button class="githubButton" style="background-image:url(src/images/icons/github_white.svg)"></button>
             </a>
             <button id="menuButton" style="background-image:url(src/images/icons/settings_white.svg)" onclick="toggleSettings()"></button>
         </div>
@@ -37,8 +40,8 @@
                     &nbsp;
                     <p>Below you can find some of my projects and some more information about me!</p>
                 </div>
-                <div class="arrowDown">
-                    <button style="background-image:url(src/images/icons/caret_lightGray.svg)" onclick="document.getElementById('aboutMeWrapper').scrollIntoView({block: 'center'});"></button>
+                <div class="arrow">
+                    <button style="background-image:url(src/images/icons/caretDown.svg)" onclick="document.getElementById('aboutMeWrapper').scrollIntoView({block: 'center'});"></button>
                 </div>
             </div>
         </body>
@@ -76,12 +79,12 @@
                     Thank you so much for reading and I hope to connect with you soon!
                 </p>
             </div>
-            <div class="arrowDown">
-                <button style="background-image:url(src/images/icons/caret_lightGray.svg)" onclick="document.getElementById('projectsWrapper').scrollIntoView();"></button>
+            <div class="arrow">
+                <button style="background-image:url(src/images/icons/caretDown.svg)" onclick="document.getElementById('projectsWrapper').scrollIntoView();"></button>
             </div>
         </div>
         <div class="groupedBody">
-            <img id="misoPicture" src="src/images/pictures/miso.jpg">
+            <img id="misoPicture" src="src/images/pictures/miso.jpg" onclick="changeMisoImage()">
             <div id="resumeContainer">
                 <a href="src/documents/Logan_Lucas_Resume_2024.pdf" target="_blank">
                     <button id="resumeButton">Click <mark class="greenBoldUnderlined">here</mark> for my resume!</button>
@@ -115,14 +118,29 @@
                 
             </div>
         </div>
-        <div class="arrowDown">
-            <button style="background-image:url(src/images/icons/caret_lightGray.svg)" onclick="document.getElementById('footer').scrollIntoView();"></button>
-        </div>
     </div>
 
-    <footer id = "footer">
-        <div class="footerName">
-            <p><mark class="green">Logan Lucas</mark></p>
+    <footer id ="footer">
+        <div class="buttonGroup">
+            <a href="https://www.linkedin.com/in/loganlucas13/" target="_blank">
+                <button class="linkedinButton" style="background-image:url(src/images/icons/linkedin_white.svg)"></button>
+            </a>
+            <a href="https://www.github.com/loganlucas13/" target="_blank">
+                <button class="githubButton" style="background-image:url(src/images/icons/github_white.svg)"></button>
+            </a>
+            <p class="textBoxNoBackground">Logan Lucas</p>
         </div>
+
+        <div id="rightHalfFooter">
+            <div id = "returnToTop">
+                <div class = "textBoxNoBackground">
+                    <p><mark class="green">Click below to return to the top!</mark></p>
+                    <div class="arrow">
+                        <button style="background-image:url(src/images/icons/caretUp.svg)" onclick="document.getElementById('header').scrollIntoView()"></button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
     </footer>
 </html>

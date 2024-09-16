@@ -3,8 +3,21 @@
 function toggleSettings() {
     const hiddenMenu = document.querySelector('.hiddenMenu');
     hiddenMenu.classList.toggle('active');
+    menuButton.classList.toggle('active');
 }
 
+
+// changes the image of miso to the other version on click
+function changeMisoImage() {
+    const image = document.getElementById('misoPicture');
+    const directory = "src/images/pictures/"
+    if (image.src.includes("miso.jpg")) {
+        image.src = directory + "miso2.jpg";
+    }
+    else {
+        image.src = directory + "miso.jpg";
+    }
+}
 
 
 // all functions below are for GitHub REST API calling
@@ -49,6 +62,7 @@ async function mergeRepoAndLanguages(data) {
         };
     }));
 }
+
 
 // retrieves all data needed for the projects section
 // data includes: repo name, description, url, and languages
