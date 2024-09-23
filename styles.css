@@ -26,7 +26,6 @@
 }
 
 html, body {
-    background-color: var(--backgroundGray);
     margin: 0;
     padding: 0;
     height: 100%;
@@ -34,20 +33,20 @@ html, body {
     overflow-x: hidden; /* prevents horizontal scrolling */
     overflow-y: auto;
     scroll-behavior: smooth;
-    background: repeating-linear-gradient(-45deg, var(--backgroundGray) 0px, var(--codeEditorGray) 5px, var(--backgroundGray) 6px, var(--codeEditorGray) 11px);
+    background: repeating-linear-gradient(-45deg, var(--backgroundGray) 0rem, var(--codeEditorGray) 0.3rem, var(--backgroundGray) 0.3rem, var(--codeEditorGray) 0.8rem);
 }
 
 #introWrapper {
     display: flex;
-    margin-top: 5%;
-    margin-bottom: 7.5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     align-items: center;
     justify-content: center;
 }
 
 header {
     background-color: var(--codeEditorGray);
-    height: 15%;
+    height: fit-content;
 
     position: relative;
     top: 0;
@@ -61,10 +60,11 @@ header {
 
     border-bottom-style: solid;
     border-bottom-color: var(--lightGray);
-    border-bottom-width: 2px;
+    border-bottom-width: 0.1rem;
 
     transform: translateY(0%);
     transition: 0s ease-in;
+
 }
 
 .headerName {
@@ -90,11 +90,8 @@ header {
 .buttonGroup button {
 
     /* dimensions */
-    min-width: 10px;
-    min-height: 10px;
-    width: 75px;
-    height: 75px;
-    aspect-ratio: 1/1;
+    width: 4.5rem;
+    height: 4.5rem;
 
     /* positioning */
     justify-content: space-between;
@@ -102,7 +99,6 @@ header {
 
     /* appearance toggles */
     border: none;
-    border-radius: 8px;
     background: none;
     background-size: contain;
     transition: .5s ease-in-out;
@@ -116,9 +112,10 @@ header {
     display: inline-block;
 }
 
+/* the icon for the mail button isn't a square, so adjustments are needed to fit in with the other header buttons */
 #mailButton {
-    height: 90px;
-    width: 90px;
+    height: 5.5rem;
+    width: 5.5rem;
 }
 
 #menuButton {
@@ -132,23 +129,21 @@ header {
     background-color: var(--codeEditorGray);
 
     /* dimensions */
-    min-width: 200px;
-    min-height: 100px;
-    width: 250px;
-    height: 250px;
+    width: 15rem;
+    height: 15rem;
 
     /* positioning + visibility */
     position: absolute;
     margin-top: 20%;
-    right: 25px;
+    right: 2rem;
 
     visibility: hidden;
     opacity: 0;
     z-index: 99;
 
     /* appearance toggles */
-    border-radius: 8px;
-    border: 2px solid var(--lightGray);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--lightGray);
     font-family: Nunito;
     transition: ease-in-out 0.2s;
 }
@@ -159,42 +154,40 @@ header {
 
 #menuCloseButton {
     /* dimensions */
-    min-width: 25px;
-    min-height: 25px;
-    width: 25px;
-    height: 25px;
+    width: 1.5rem;
+    height: 1.5rem;
     aspect-ratio: 1/1;
 
     /* positioning */
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 1rem;
+    top: 1rem;
 
     /* appearance toggles */
-    border-radius: 32px;
-    border: 1.5px solid var(--lightRed);
+    border-radius: 100%;
+    border: 0.1rem solid var(--lightRed);
     background-color: var(--lightLightRed);
     color: inherit;
     background-size: cover;
     transition: 0.5s ease-in-out;
 }
 #menuCloseButton:hover {
-    transform: scale(0.95);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
 #personalPicture {
 
     /* dimensions */
-    max-width: 400px;
+    max-width: 20rem;
 
 
     /* positioning */
-    margin: 20px;
+    margin: 2rem;
 
     /* appearance toggles */
-    border-radius: 10px;
-    border: 2px solid var(--lightGray);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--lightGray);
     transition: ease-in-out 0.5s;
 }
 #personalPicture:hover {
@@ -205,16 +198,16 @@ header {
 
     /* dimensions */
     max-width: fit-content;
-    padding: 10px;
+    padding: 1rem;
 
     /* positioning */
-    margin: 30px;
+    margin: 2rem;
     margin-inline: auto;
 
     /* appearance toggles */
     background-color: var(--codeEditorGray);
-    border-radius: 10px;
-    border: 2px solid var(--lightGray);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--lightGray);
     font-family: Nunito;
     color: var(--lightLightBlue);
     text-align: center;
@@ -229,18 +222,18 @@ header {
 
     /* dimensions */
     min-width: fit-content;
-    max-width: 750px;
-    padding: 10px;
+    max-width: 45rem;
+    padding: 1rem;
 
     /* positioning */
-    margin: 30px;
+    margin: 2rem;
 
     /* appearance toggles */
     background-color: var(--codeEditorGray);
-    border-radius: 10px;
-    border: 2px solid var(--lightGray);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--lightGray);
     font-family: Nunito;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--lightLightBlue);
     text-align: center;
     transition: ease-in-out 0.5s;
@@ -253,6 +246,7 @@ header {
 
 mark {
     background: none;
+    font-weight: bold;
 }
 mark.green {
     color: var(--seaGreen);
@@ -269,7 +263,7 @@ mark.purple {
 mark.greenBoldUnderlined {
     color: var(--seaGreen);
     font-weight: bold;
-    text-decoration: 2px underline;
+    text-decoration: 0.1rem underline;
 }
 
 .arrow {
@@ -285,19 +279,29 @@ mark.greenBoldUnderlined {
     background: none;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50px;
-    width: 50px;
-    margin-top: 20px;
+    height: 5rem;
+    width: 5rem;
+    margin-top: 1rem;
     transition: ease-in-out 0.5s;
+    animation-name: idleAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 .arrow button:hover {
-    transform: scale(1.05);
     cursor: pointer;
 }
 
+@keyframes idleAnimation {
+    0% { transform: translate(0, 0); }
+    50% {transform: translate(0, 0.5rem); }
+    100% {transform: translate(0, -0); }
+
+}
+
 #aboutMeWrapper {
-    margin-top: 7.5%;
-    margin-bottom: 7.5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,15 +309,15 @@ mark.greenBoldUnderlined {
 
 #misoPicture {
     /* dimensions */
-    max-width: 300px;
+    max-width: 20rem;
 
     /* positioning */
-    margin: 20px;
+    margin: 2rem;
 
     /* appearance toggles */
     transition: ease-in-out 0.5s;
-    border-radius: 10px;
-    border: 2px solid var(--lightGray);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--lightGray);
 }
 #misoPicture:hover {
     transform: scale(1.01);
@@ -328,12 +332,12 @@ mark.greenBoldUnderlined {
 }
 
 #resumeButton {
-    width: 250px;
-    height: 100px;
+    width: 15rem;
+    height: 5rem;
 
     background-color: var(--codeEditorGray);
-    border-radius: 8px;
-    border: 2px solid var(--lightGray);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--lightGray);
 
     font-family: Nunito;
     font-size: 1.5rem;
@@ -347,8 +351,8 @@ mark.greenBoldUnderlined {
 }
 
 #projectsWrapper {
-    margin-top: 7.5%;
-    margin-bottom: 7.5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -365,10 +369,10 @@ mark.greenBoldUnderlined {
 .project {
     height: 20rem;
     width: 25%;
-    margin: 30px;
+    margin: 2rem;
     background-color: var(--codeEditorGray);
-    border-radius: 10px;
-    border: 2px solid var(--lightGray);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--lightGray);
     display: inline-block;
     transition: ease-in-out 0.5s;
 }
@@ -378,38 +382,37 @@ mark.greenBoldUnderlined {
 
 footer {
     position: relative;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    height: fit-content;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     display: flex;
-    margin-top: 500px;
+    margin-top: 3rem;
     align-items: center;
     padding: 1rem;
     flex-direction: row;
     justify-content: space-between;
 
-    height: 20%;
     background-color: var(--codeEditorGray);
-    border-top: 2px solid var(--lightGray);
+    border-top: 0.1rem solid var(--lightGray);
     font-family: Nunito;
 }
 
 .footerButtons button {
-    min-width: 10px;
-    min-height: 10px;
-    width: 75px;
-    height: 75px;
+    width: 4.5rem;
+    height: 4.5rem;
 }
 
 .textBoxNoBackground {
     /* dimensions */
     min-width: fit-content;
-    max-width: 225px;
-    padding: 10px;
+    max-width: 15rem;
+    padding: 1rem;
 
     /* positioning */
-    margin-right: 30px;
+    margin-right: 2rem;
 
     /* appearance toggles */
     font-family: Nunito;
