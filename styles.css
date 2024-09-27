@@ -6,10 +6,7 @@
 :root {
    --lightGray: #d3d3d3;
    --backgroundGray: #2e323a;
-   --darkGray: #242526;
    --codeEditorGray: #262930;
-   --darkPurple: #150324;
-   --darkDarkPurple: #0c0214;
    --lightLightBlue: #b6c7da;
    --seaGreen: #64bfb6;
    --lightLightRed: #ed6a5e;
@@ -17,6 +14,8 @@
    --lightYellow: #c5c598;
    --lightBlue: #60b7d5;
    --lightPurple: #bc94d6;
+   --lightLightPurple: #d1b7e2;
+   --darkPurple: #5a406c ;
 }
 
 * {
@@ -80,8 +79,6 @@ header {
     font-weight: bold;
     color: var(--lightGray);
     transition: .5s ease-in-out;
-
-    user-select: none;
 }
 .headerName:hover {
     transform: scale(1.01);
@@ -212,7 +209,6 @@ header {
     color: var(--lightLightBlue);
     text-align: center;
     transition: ease-in-out 0.5s;
-    user-select: none;
 }
 .titleBox:hover {
     transform: scale(1.01);
@@ -237,7 +233,6 @@ header {
     color: var(--lightLightBlue);
     text-align: center;
     transition: ease-in-out 0.5s;
-    user-select: none;
 
 }
 .textBox:hover {
@@ -370,14 +365,65 @@ mark.greenBoldUnderlined {
     height: 20rem;
     width: 25%;
     margin: 2rem;
+    padding: 0.5rem;
+    font-family: Nunito;
     background-color: var(--codeEditorGray);
     border-radius: 0.5rem;
     border: 0.1rem solid var(--lightGray);
-    display: inline-block;
     transition: ease-in-out 0.5s;
+    position: relative;
 }
 .project:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
+}
+.project h2 {
+    color: var(--seaGreen);
+    background: var(--backgroundGray);
+    text-align: center;
+    padding: 0.5rem;
+    border: 0.1rem solid var(--lightGray);
+    border-radius: 0.5rem;
+    display: table; /* to center the title */
+    margin: 1rem auto;
+    align-items: center;
+}
+.project a {
+    color: var(--darkPurple);
+    bottom: 0.5rem;
+    background-color: var(--lightPurple);
+    border: 0.1rem solid var(--lightLightPurple);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+.project a:hover {
+    background-color: var(--lightLightPurple);
+    border-color: var(--lightPurple);
+}
+.project p {
+    color: var(--lightLightBlue);
+}
+.project h3 {
+    color: var(--lightBlue);
+    margin-bottom: 0.25rem;
+}
+
+.description {
+    text-align: center;
+    margin: 0.75rem;
+}
+
+.languageDisplay {
+    background-color: var(--backgroundGray);
+    border: 0.1rem solid var(--lightGray);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
 }
 
 footer {
@@ -421,7 +467,6 @@ footer {
     color: var(--lightLightBlue);
     text-align: center;
     transition: ease-in-out 0.5s;
-    user-select: none;
 }
 
 #rightHalfFooter {

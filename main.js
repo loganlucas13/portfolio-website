@@ -10,12 +10,12 @@ function toggleSettings() {
 // changes the image of miso to the other version on click
 function changeMisoImage() {
     const image = document.getElementById('misoPicture');
-    const directory = "src/images/pictures/"
-    if (image.src.includes("miso.jpg")) {
-        image.src = directory + "miso2.jpg";
+    const directory = 'src/images/pictures/';
+    if (image.src.includes('miso.jpg')) {
+        image.src = directory + 'miso2.jpg';
     }
     else {
-        image.src = directory + "miso.jpg";
+        image.src = directory + 'miso.jpg';
     }
 }
 
@@ -25,8 +25,8 @@ function changeMisoImage() {
 
 
 // fetches repositories using the GitHub REST API and returns
-async function getRepositories() { 
-    const res = await fetch("https://api.github.com/users/loganlucas13/repos")
+async function getRepositories() {
+    const res = await fetch('https://api.github.com/users/loganlucas13/repos')
     const data = await res.json();
     return data;
 }
@@ -46,7 +46,7 @@ function parseRepoData(rawData) {
 
 // retrieves languages for a given repository and returns
 async function getLanguages(repoName) {
-    const query = "https://api.github.com/repos/loganlucas13/" + repoName + "/languages";
+    const query = 'https://api.github.com/repos/loganlucas13/' + repoName + '/languages';
     const res = await fetch(query)
     const data = await res.json();
     return data;
@@ -72,3 +72,34 @@ async function getAllData() {
     const finalData = mergeRepoAndLanguages(parsedRepoData);
     return finalData;
 }
+
+
+// fetches all data from the GitHub API and displays onto the website
+// excludes specific repositories from being shown (for example, the GitHub profile configuration repo)
+document.addEventListener('DOMContentLoaded', async function() {
+    let dataEntries = await getAllData();
+
+    const excludedRepositories = ['loganlucas13'];
+    dataEntries = dataEntries.filter(project => !excludedRepositories.includes(project.name));
+
+    const projectDivs = document.querySelectorAll('#projectBoxes .project');
+
+    // iterates through each project div to display information
+    dataEntries.forEach((project, index) => {
+        if (index < projectDivs.length) {
+            const currentProject = projectDivs[index];
+
+            // only languages with more than 100 lines in the repository are shown
+            const htmlContent = `
+            <h2>${project.name}</h2>
+            <p class="description">${project.description}</p>
+            <div class="languageDisplay">
+            <h3>Languages:</h3>
+            <p>${Object.entries(project.languages).filter(([language, lines]) => lines > 100).map(([language, lines]) => `${language}`).join(', ')}</p>
+            </div>
+            <p><a href="${project.url}" target="_blank">GitHub Link</a></p>
+            `;
+            currentProject.innerHTML = htmlContent;
+        }
+    });
+});
