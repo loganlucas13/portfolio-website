@@ -99,7 +99,7 @@ async function getAllData() {
 document.addEventListener('DOMContentLoaded', async function() {
     let dataEntries = await getAllData();
 
-    const excludedRepositories = ['loganlucas13'];
+    const excludedRepositories = ['loganlucas13', 'trackify'];
     dataEntries = dataEntries.filter(project => !excludedRepositories.includes(project.name));
 
     const projectDivs = document.querySelectorAll('#projectBoxes .project');
