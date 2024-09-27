@@ -113,11 +113,15 @@ document.addEventListener('DOMContentLoaded', async function() {
             const htmlContent = `
             <h2>${project.name}</h2>
             <p class="description">${project.description}</p>
+            <div class="projectBottom">
             <div class="languageDisplay">
             <h3>Languages:</h3>
             <p>${Object.entries(project.languages).filter(([language, lines]) => lines > 100).map(([language, lines]) => `${language}`).join(', ')}</p>
             </div>
+            <div class="projectLink">
             <p><a href="${project.url}" target="_blank">GitHub Link</a></p>
+            </div>
+            </div>
             `;
             currentProject.innerHTML = htmlContent;
         }

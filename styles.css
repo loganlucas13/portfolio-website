@@ -312,7 +312,7 @@ mark.greenBoldUnderlined {
 }
 
 .project {
-    height: 20rem;
+    max-height: fit-content;
     width: 25%;
     margin: 2rem;
     padding: 0.5rem;
@@ -321,6 +321,8 @@ mark.greenBoldUnderlined {
     border-radius: 0.5rem;
     transition: ease-in-out 0.5s;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .project:hover {
     transform: scale(1.05);
@@ -331,23 +333,8 @@ mark.greenBoldUnderlined {
     text-align: center;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    display: table; /* to center the title */
     margin: 1rem auto;
     align-items: center;
-}
-.project a {
-    color: var(--darkPurple);
-    bottom: 0.5rem;
-    background-color: var(--lightPurple);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-}
-.project a:hover {
-    background-color: var(--lightLightPurple);
-    border-color: var(--lightPurple);
 }
 .project p {
     color: var(--lightLightBlue);
@@ -355,6 +342,16 @@ mark.greenBoldUnderlined {
 .project h3 {
     color: var(--lightBlue);
     margin-bottom: 0.25rem;
+}
+.project a {
+    color: var(--darkPurple);
+    background-color: var(--lightPurple);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.project a:hover {
+    background-color: var(--lightLightPurple);
+    border-color: var(--lightPurple);
 }
 
 .description {
@@ -367,9 +364,19 @@ mark.greenBoldUnderlined {
     border-radius: 0.5rem;
     padding: 0.5rem;
     display: inline-block;
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+}
+
+.projectLink {
+    padding-bottom: 0.5rem;
+}
+
+.projectBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-grow: 1;
+    padding: 0.5rem;
+    flex-wrap: wrap;
 }
 
 footer {
