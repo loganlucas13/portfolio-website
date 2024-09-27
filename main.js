@@ -1,9 +1,29 @@
 
 // changes the visibilty of the settings menu upon clicking the button in the header
-function toggleSettings() {
-    const hiddenMenu = document.querySelector('.hiddenMenu');
-    hiddenMenu.classList.toggle('active');
-    menuButton.classList.toggle('active');
+function toggleTheme() {
+    root = document.documentElement;
+
+    themeButton.classList.toggle('light');
+    const carets = document.getElementsByClassName('arrow');
+
+    if (themeButton.classList.contains('light')) {
+        root.style.setProperty('--background1', '#eeeeee');
+        root.style.setProperty('--background2', 'white');
+
+        for (let i = 0; i < carets.length-1; i++) { // the '-1' excludes the footer caret from being changed
+            const button = carets[i].querySelector('button');
+            button.style.backgroundImage = "url('src/images/icons/caret_down_dark.svg')";
+        }
+    }
+    else {
+        root.style.setProperty('--background1', '#2e323a');
+        root.style.setProperty('--background2', '#262930');
+
+        for (let i = 0; i < carets.length-1; i++) { // the '-1' excludes the footer caret from being changed
+            const button = carets[i].querySelector('button');
+            button.style.backgroundImage = "url('src/images/icons/caret_down_white.svg')";
+        }
+    }
 }
 
 

@@ -21,10 +21,7 @@
             <a href="https://www.github.com/loganlucas13/" target="_blank">
                 <button class="githubButton" style="background-image:url(src/images/icons/github_white.svg)"></button>
             </a>
-            <button id="menuButton" style="background-image:url(src/images/icons/settings_white.svg)" onclick="toggleSettings()"></button>
-        </div>
-        <div class="hiddenMenu">
-            <button id="menuCloseButton" onclick="toggleSettings()"></button>
+            <button id="themeButton" style="background-image:url(src/images/icons/theme_button.svg)" onclick="toggleTheme()"></button>
         </div>
     </header>
 
@@ -41,7 +38,7 @@
                     <p>Below you can find some of my projects and some more information about me!</p>
                 </div>
                 <div class="arrow">
-                    <button style="background-image:url(src/images/icons/caretDown.svg)" onclick="document.getElementById('aboutMeWrapper').scrollIntoView({block: 'center'});"></button>
+                    <button style="background-image:url(src/images/icons/caret_down_white.svg)" onclick="document.getElementById('aboutMeWrapper').scrollIntoView({block: 'center'});"></button>
                 </div>
             </div>
         </body>
@@ -80,14 +77,14 @@
                 </p>
             </div>
             <div class="arrow">
-                <button style="background-image:url(src/images/icons/caretDown.svg)" onclick="document.getElementById('projectsWrapper').scrollIntoView();"></button>
+                <button style="background-image:url(src/images/icons/caret_down_white.svg)" onclick="document.getElementById('projectsWrapper').scrollIntoView();"></button>
             </div>
         </div>
         <div class="groupedBody">
             <img id="misoPicture" src="src/images/pictures/miso.jpg" onclick="changeMisoImage()">
             <div id="resumeContainer">
-                <a href="src/documents/Logan_Lucas_Resume_2024.pdf" target="_blank">
-                    <button id="resumeButton">Click <mark class="greenBoldUnderlined">here</mark> for my resume!</button>
+                <a href="src/documents/Logan_Lucas_Resume_2024.pdf" target="_blank" download="Logan_Lucas_resume.pdf">
+                    <button id="resumeButton">Click here for my resume!</button>
                 </a>
             </div>
         </div>
@@ -120,15 +117,11 @@
         </div>
 
         <div id="rightHalfFooter">
-            <div id = "returnToTop">
-                <div class = "textBoxNoBackground">
-                    <p><mark class="green">Click below to return to the top!</mark></p>
-                    <div class="arrow">
-                        <button style="background-image:url(src/images/icons/caretUp.svg)" onclick="document.getElementById('header').scrollIntoView()"></button>
-                    </div>
+            <div class="arrow">
+                <div id="arrowUp">
+                    <button style="background-image:url(src/images/icons/caret_down_white.svg)" onclick="document.getElementById('header').scrollIntoView()"></button>
                 </div>
             </div>
         </div>
-
     </footer>
 </html>

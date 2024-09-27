@@ -4,18 +4,22 @@
 }
 
 :root {
-   --lightGray: #d3d3d3;
-   --backgroundGray: #2e323a;
-   --codeEditorGray: #262930;
-   --lightLightBlue: #b6c7da;
-   --seaGreen: #64bfb6;
-   --lightLightRed: #ed6a5e;
-   --lightRed: #c2453b;
-   --lightYellow: #c5c598;
-   --lightBlue: #60b7d5;
-   --lightPurple: #bc94d6;
-   --lightLightPurple: #d1b7e2;
-   --darkPurple: #5a406c ;
+    /* background1 and 2 are defined separately so they can be changed for light mode */
+    --background1: #2e323a;
+    --background2:  #262930;
+
+    --backgroundGray: #2e323a;
+    --codeEditorGray: #262930;
+    --lightLightBlue: #b6c7da;
+    --seaGreen: #64bfb6;
+    --darkSeaGreen: #355f5a;
+    --lightLightRed: #ed6a5e;
+    --lightRed: #c2453b;
+    --lightYellow: #c5c598;
+    --lightBlue: #60b7d5;
+    --lightPurple: #bc94d6;
+    --lightLightPurple: #d1b7e2;
+    --darkPurple: #5a406c;
 }
 
 * {
@@ -32,7 +36,12 @@ html, body {
     overflow-x: hidden; /* prevents horizontal scrolling */
     overflow-y: auto;
     scroll-behavior: smooth;
-    background: repeating-linear-gradient(-45deg, var(--backgroundGray) 0rem, var(--codeEditorGray) 0.3rem, var(--backgroundGray) 0.3rem, var(--codeEditorGray) 0.8rem);
+    overscroll-behavior: none;
+    background: repeating-linear-gradient(-45deg, var(--background1) 0rem, var(--background2) 0.3rem, var(--background1) 0.3rem, var(--background2) 0.8rem);
+}
+
+img {
+    border: 0.25rem solid var(--backgroundGray);
 }
 
 #introWrapper {
@@ -57,10 +66,6 @@ header {
     align-items: center;
     z-index: 99;
 
-    border-bottom-style: solid;
-    border-bottom-color: var(--lightGray);
-    border-bottom-width: 0.1rem;
-
     transform: translateY(0%);
     transition: 0s ease-in;
 
@@ -77,7 +82,6 @@ header {
     /* appearance */
     font-family: Nunito;
     font-weight: bold;
-    color: var(--lightGray);
     transition: .5s ease-in-out;
 }
 .headerName:hover {
@@ -115,62 +119,12 @@ header {
     width: 5.5rem;
 }
 
-#menuButton {
+#themeButton {
+    rotate: 90deg;
     transition: ease-in-out 0.5s;
 }
-#menuButton.active {
-    transform: rotate(45deg);
-}
-
-.hiddenMenu {
-    background-color: var(--codeEditorGray);
-
-    /* dimensions */
-    width: 15rem;
-    height: 15rem;
-
-    /* positioning + visibility */
-    position: absolute;
-    margin-top: 20%;
-    right: 2rem;
-
-    visibility: hidden;
-    opacity: 0;
-    z-index: 99;
-
-    /* appearance toggles */
-    border-radius: 0.5rem;
-    border: 0.1rem solid var(--lightGray);
-    font-family: Nunito;
-    transition: ease-in-out 0.2s;
-}
-.hiddenMenu.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-#menuCloseButton {
-    /* dimensions */
-    width: 1.5rem;
-    height: 1.5rem;
-    aspect-ratio: 1/1;
-
-    /* positioning */
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-
-    /* appearance toggles */
-    border-radius: 100%;
-    border: 0.1rem solid var(--lightRed);
-    background-color: var(--lightLightRed);
-    color: inherit;
-    background-size: cover;
-    transition: 0.5s ease-in-out;
-}
-#menuCloseButton:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+#themeButton.light {
+    transform: rotate(180deg);
 }
 
 #personalPicture {
@@ -184,7 +138,6 @@ header {
 
     /* appearance toggles */
     border-radius: 0.5rem;
-    border: 0.1rem solid var(--lightGray);
     transition: ease-in-out 0.5s;
 }
 #personalPicture:hover {
@@ -204,7 +157,6 @@ header {
     /* appearance toggles */
     background-color: var(--codeEditorGray);
     border-radius: 0.5rem;
-    border: 0.1rem solid var(--lightGray);
     font-family: Nunito;
     color: var(--lightLightBlue);
     text-align: center;
@@ -227,7 +179,6 @@ header {
     /* appearance toggles */
     background-color: var(--codeEditorGray);
     border-radius: 0.5rem;
-    border: 0.1rem solid var(--lightGray);
     font-family: Nunito;
     font-size: 1.25rem;
     color: var(--lightLightBlue);
@@ -312,7 +263,6 @@ mark.greenBoldUnderlined {
     /* appearance toggles */
     transition: ease-in-out 0.5s;
     border-radius: 0.5rem;
-    border: 0.1rem solid var(--lightGray);
 }
 #misoPicture:hover {
     transform: scale(1.01);
@@ -330,14 +280,14 @@ mark.greenBoldUnderlined {
     width: 15rem;
     height: 5rem;
 
-    background-color: var(--codeEditorGray);
+    background-color: var(--darkSeaGreen);
     border-radius: 0.5rem;
-    border: 0.1rem solid var(--lightGray);
+    border: none;
 
     font-family: Nunito;
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--lightLightBlue);
+    color: var(--seaGreen);
     transition: ease-in-out 0.5s;
 }
 #resumeButton:hover {
@@ -369,7 +319,6 @@ mark.greenBoldUnderlined {
     font-family: Nunito;
     background-color: var(--codeEditorGray);
     border-radius: 0.5rem;
-    border: 0.1rem solid var(--lightGray);
     transition: ease-in-out 0.5s;
     position: relative;
 }
@@ -381,7 +330,6 @@ mark.greenBoldUnderlined {
     background: var(--backgroundGray);
     text-align: center;
     padding: 0.5rem;
-    border: 0.1rem solid var(--lightGray);
     border-radius: 0.5rem;
     display: table; /* to center the title */
     margin: 1rem auto;
@@ -391,7 +339,6 @@ mark.greenBoldUnderlined {
     color: var(--darkPurple);
     bottom: 0.5rem;
     background-color: var(--lightPurple);
-    border: 0.1rem solid var(--lightLightPurple);
     border-radius: 0.5rem;
     padding: 0.5rem;
     position: absolute;
@@ -417,7 +364,6 @@ mark.greenBoldUnderlined {
 
 .languageDisplay {
     background-color: var(--backgroundGray);
-    border: 0.1rem solid var(--lightGray);
     border-radius: 0.5rem;
     padding: 0.5rem;
     display: inline-block;
@@ -442,7 +388,7 @@ footer {
     justify-content: space-between;
 
     background-color: var(--codeEditorGray);
-    border-top: 0.1rem solid var(--lightGray);
+    border-top: 0.1rem solid var(--borderColor);
     font-family: Nunito;
 }
 
@@ -473,4 +419,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#arrowUp {
+    rotate: 180deg;
+    margin-right: 2rem;
+    transform: translateY(-1rem);
 }
