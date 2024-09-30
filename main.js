@@ -29,13 +29,16 @@ function toggleTheme() {
 
 // changes the image of miso to the other version on click
 function changeMisoImage() {
-    const image = document.getElementById('misoPicture');
-    const directory = 'src/images/pictures/';
-    if (image.src.includes('miso.jpg')) {
-        image.src = directory + 'miso2.jpg';
+    const image1 = document.getElementById('misoPicture1');
+    const image2 = document.getElementById('misoPicture2');
+
+    if (image1.style.opacity === "1" || image1.style.opacity === "") {
+        image1.style.opacity = 0;
+        image2.style.opacity = 1;
     }
     else {
-        image.src = directory + 'miso.jpg';
+        image1.style.opacity = 1;
+        image2.style.opacity = 0;
     }
 }
 
