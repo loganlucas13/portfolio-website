@@ -32,6 +32,7 @@ function changeMisoImage() {
     const image1 = document.getElementById('misoPicture1');
     const image2 = document.getElementById('misoPicture2');
 
+    /* the 'style' attribute always returns a string, so comparison must be made with strings */
     if (image1.style.opacity === "1" || image1.style.opacity === "") {
         image1.style.opacity = 0;
         image2.style.opacity = 1;
