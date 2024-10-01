@@ -45,14 +45,6 @@ img {
     border: 0.25rem solid var(--backgroundGray);
 }
 
-#introWrapper {
-    display: flex;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    align-items: center;
-    justify-content: center;
-}
-
 header {
     background-color: var(--codeEditorGray);
     height: fit-content;
@@ -69,7 +61,6 @@ header {
 
     transform: translateY(0%);
     transition: 0s ease-in;
-
 }
 
 .headerName {
@@ -84,6 +75,11 @@ header {
     font-family: Nunito;
     font-weight: bold;
     transition: .5s ease-in-out;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 6vw;
+        padding-left: 0.25rem;
+    }
 }
 .headerName:hover {
     transform: scale(1.01);
@@ -104,6 +100,11 @@ header {
     background: none;
     background-size: contain;
     transition: .5s ease-in-out;
+
+    @media screen and (max-width: 1000px) {
+        width: 2rem;
+        height: 2rem;
+    }
 }
 .buttonGroup button:hover {
     transform: scale(1.05);
@@ -118,6 +119,11 @@ header {
 #mailButton {
     height: 5.5rem;
     width: 5.5rem;
+
+    @media screen and (max-width: 1000px) {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
 }
 
 #themeButton {
@@ -128,11 +134,22 @@ header {
     transform: rotate(180deg);
 }
 
+#introWrapper {
+    display: flex;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+}
+
 #personalPicture {
 
     /* dimensions */
     max-width: 20rem;
-
 
     /* positioning */
     margin: 2rem;
@@ -140,6 +157,11 @@ header {
     /* appearance toggles */
     border-radius: 0.5rem;
     transition: ease-in-out 0.5s;
+
+    @media screen and (max-width: 1000px) {
+        width: 65%;
+        margin: 0rem;
+    }
 }
 #personalPicture:hover {
     transform: scale(1.01);
@@ -162,6 +184,12 @@ header {
     color: var(--lightLightBlue);
     text-align: center;
     transition: ease-in-out 0.5s;
+
+    @media screen and (max-width: 1000px) {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 3vw;
+    }
 }
 .titleBox:hover {
     transform: scale(1.01);
@@ -185,6 +213,12 @@ header {
     color: var(--lightLightBlue);
     text-align: center;
     transition: ease-in-out 0.5s;
+
+    @media screen and (max-width: 1000px) {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 3vw;
+    }
 
 }
 .textBox:hover {
@@ -242,6 +276,10 @@ mark.greenBoldUnderlined {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
 }
 .arrow button:hover {
     cursor: pointer;
@@ -251,7 +289,6 @@ mark.greenBoldUnderlined {
     0% { transform: translate(0, 0); }
     50% {transform: translate(0, 0.5rem); }
     100% {transform: translate(0, -0); }
-
 }
 
 #aboutMeWrapper {
@@ -260,6 +297,17 @@ mark.greenBoldUnderlined {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+}
+
+#misoAndResume {
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 #misoContainer {
@@ -274,6 +322,14 @@ mark.greenBoldUnderlined {
     /* appearance toggles */
     transition: ease-in-out 0.5s;
     opacity: 1;
+
+    @media screen and (max-width: 1000px) {
+        width: 9rem;
+        height: 12rem;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        left: 0.5rem;
+    }
 }
 #misoContainer:hover {
     cursor: pointer;
@@ -296,10 +352,15 @@ mark.greenBoldUnderlined {
     margin-inline: auto;
     text-align: center;
 }
+#resumeContainer a {
+    justify-content: center;
+    align-items: center;
+}
 
 #resumeButton {
     width: 15rem;
     height: 5rem;
+    margin-top: 5%;
 
     background-color: var(--darkSeaGreen);
     border-radius: 0.5rem;
@@ -308,8 +369,16 @@ mark.greenBoldUnderlined {
     font-family: Nunito;
     font-size: 1.5rem;
     font-weight: bold;
+    padding: 0.5rem;
     color: var(--seaGreen);
     transition: ease-in-out 0.5s;
+
+    @media screen and (max-width: 1000px) {
+        width: 60%;
+        height: 40%;
+        font-size: 4.5vw;
+        margin-top: 25%;
+    }
 }
 #resumeButton:hover {
     transform: scale(1.01);
@@ -344,6 +413,12 @@ mark.greenBoldUnderlined {
     position: relative;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 1000px) {
+        width: 45%;
+        margin: 0.5rem;
+        font-size: 2vw;
+    }
 }
 .project:hover {
     transform: scale(1.05);
@@ -385,10 +460,11 @@ mark.greenBoldUnderlined {
     border-radius: 0.5rem;
     padding: 0.5rem;
     display: inline-block;
+    max-width: 45%;
 }
 
 .projectLink {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
 }
 
 .projectBottom {
@@ -429,10 +505,10 @@ footer {
     /* dimensions */
     min-width: fit-content;
     max-width: 15rem;
-    padding: 1rem;
 
     /* positioning */
     margin-right: 2rem;
+    margin-top: 0.5rem;
 
     /* appearance toggles */
     font-family: Nunito;
