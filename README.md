@@ -1,13 +1,13 @@
 <div align="center">
   <img src = "src/images/icons/favicon.ico">
   <h1>
-    <a href="https://loganlucas.dev">loganlucas.dev</a> - version 1.0
+    <a href="https://loganlucas.dev" target="_blank">loganlucas.dev</a> - version 1.0
   </h1>
 </div>
 
 ## About this project
-* Created with HTML, CSS, and Javascript and hosted through <a href="https://www.cloudflare.com/">Cloudflare</a>!
-* Uses the <a href="https://docs.github.com/en/rest">GitHub REST API</a> to provide automatic updates to the 'Projects' section of the website!
+* Created with HTML, CSS, and Javascript and hosted through <a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a>!
+* Uses the <a href="https://docs.github.com/en/rest" target="_blank">GitHub REST API</a> to provide automatic updates to the 'Projects' section of the website!
 * Includes an option for light mode by clicking the circle icon in the header (however, the website is set to default to dark mode).
 * Mobile friendly!
 
@@ -19,7 +19,7 @@ To run this website locally, from the root directory enter the command `npm run 
 
 *or*
 
-Visit the live website <a href="https://loganlucas.dev">here</a>!
+Visit the live website <a href="https://loganlucas.dev" target="_blank">here</a>!
 
 ## Preview
 #### 🎤 Introduction
