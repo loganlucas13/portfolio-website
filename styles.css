@@ -133,9 +133,6 @@ header {
 #themeButton.light {
     transform: rotate(180deg);
 }
-#themeButton.light:hover {
-    transform: scale(1.05) rotate(180deg);
-}
 
 #introWrapper {
     display: flex;
