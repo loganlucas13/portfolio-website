@@ -15,7 +15,7 @@ export default function Header() {
     };
 
     return (
-        <div className="flex justify-center p-4">
+        <div className="flex justify-center p-4 pb-8">
             <div className="flex flex-row bg-main p-4 gap-4 border-2 border-border rounded-base shadow-shadow">
                 <Button
                     variant={checkButtonHighlighting('/')}

@@ -31,7 +31,7 @@ export default function Home() {
                             <div className="flex flex-grow"></div>
                             <div className="flex flex-row gap-4 justify-end">
                                 <Button
-                                    className="pr-3"
+                                    className="pr-3 group"
                                     variant="neutral"
                                     size="lg"
                                     onClick={() =>
@@ -42,7 +42,7 @@ export default function Home() {
                                         )
                                     }
                                 >
-                                    <BookTextIcon size={64} />
+                                    <BookTextIcon size={64} className="group" />
                                     Resume
                                 </Button>
                                 <Button variant="neutral" size="icon">
@@ -112,8 +112,15 @@ export default function Home() {
                                 <span className="p-1 bg-bg rounded-base">
                                     SWE internship for Summer 2025
                                 </span>
-                                . If you're interested, please take a look at my
-                                resume.
+                                . If you're interested, please take a look at my{' '}
+                                <a
+                                    className="underline decoration-main decoration-2 underline-offset-2 hover:cursor-pointer"
+                                    href="/documents/Logan_Lucas_resume.pdf"
+                                    target="_blank"
+                                >
+                                    resume
+                                </a>
+                                .
                             </p>
                             <p className="text-lg">
                                 Thank you so much for visiting, and I hope to be
