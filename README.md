@@ -1,34 +1,50 @@
-<div align="center">
-  <img src = "src/images/icons/favicon.ico">
-  <h1>
-    <a href="https://loganlucas.dev" target="_blank">loganlucas.dev</a> - version 1.0
-  </h1>
-</div>
+# React + TypeScript + Vite
 
-## About this project
-* Created with HTML, CSS, and Javascript and hosted through <a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a>!
-* Uses the <a href="https://docs.github.com/en/rest" target="_blank">GitHub REST API</a> to provide automatic updates to the 'Projects' section of the website!
-* Includes an option for light mode by clicking the circle icon in the header (however, the website is set to default to dark mode).
-* Mobile friendly!
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-I'm always looking to improve this website (after all, this is version 1.0!) so if you have any suggestions, 
-please feel free to suggest them! Thank you so much for checking this project out, and I hope you stop by again!
+Currently, two official plugins are available:
 
-## Instructions
-To run this website locally, from the root directory enter the command `npm run dev` in the terminal
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-*or*
+## Expanding the ESLint configuration
 
-Visit the live website <a href="https://loganlucas.dev" target="_blank">here</a>!
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Preview
-#### 🎤 Introduction
-![](https://github.com/user-attachments/assets/b431de98-f419-4c27-a2a2-9925a7f66c4a)
+- Configure the top-level `parserOptions` property like this:
 
-#### 📔 About Me
-![](https://github.com/user-attachments/assets/0155cd4a-3497-42e8-aa1d-29b4fb95e831)
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-#### 🖋️ Projects
-![](https://github.com/user-attachments/assets/ec5d0dfe-1b15-42fd-9c3e-28110133b83e)
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
