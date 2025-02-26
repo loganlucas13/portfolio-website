@@ -18,7 +18,7 @@ const entries: ProjectEntry[] = [
         image: localBitesImage,
         title: 'LocalBites - created for SparkHacks 2025',
         caption:
-            'Having trouble finding a place to eat? Try LocalBites!\n\n This web app gathers data from the Google Search and Google Places APIs to find delicious places to eat – all while prioritizing small businesses!',
+            'Having trouble finding a place to eat? Try LocalBites!\n\n This web app gathers data from the Google Search and Google Places APIs to find delicious places to eat – all while prioritizing small businesses!\n\n',
         link: 'https://github.com/loganlucas13/date-planner/tree/main',
         technologies: ['React', 'TypeScript', 'Python', 'Django'],
     },

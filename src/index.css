@@ -49,5 +49,28 @@
         background-color: var(--bg);
         background-image: radial-gradient(var(--main) 1.8px, var(--bg) 1.8px);
         background-size: 36px 36px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        body {
+            transform: scale(1);
+            transform-origin: top center;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        body {
+            transform: scale(0.5);
+            transform-origin: top center;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        body {
+            transform: scale(1.5);
+            transform-origin: top center;
+        }
     }
 }

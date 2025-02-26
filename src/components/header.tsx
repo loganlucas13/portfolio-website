@@ -21,7 +21,7 @@ export default function Header() {
                     variant={checkButtonHighlighting('/')}
                     onClick={() => navigate('/')}
                 >
-                    About
+                    About me!
                 </Button>
                 <Button
                     variant={checkButtonHighlighting('/experience')}
@@ -30,16 +30,8 @@ export default function Header() {
                     Experience
                 </Button>
                 <Button
-                    variant={checkButtonHighlighting('/contact')}
-                    onClick={() => navigate('/contact')}
-                >
-                    Contact me!
-                </Button>
-            </div>
-            <div className="absolute right-8 top-8">
-                <Button
                     variant="neutral"
-                    size="icon"
+                    size="sm"
                     onClick={() =>
                         setTheme(theme === 'dark' ? 'light' : 'dark')
                     }

@@ -14,7 +14,7 @@ export default function Home() {
             <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
                 <Header></Header>
                 <div className="flex flex-col items-center justify-center">
-                    <div className="flex flex-col justify-center w-1/2 gap-8 p-8 bg-main border-2 border-border rounded-base shadow-shadow text-text">
+                    <div className="flex flex-col justify-center w-full sm:w-5/6 md:w-1/2 gap-10 p-8 bg-main border-2 border-border rounded-base shadow-shadow text-text">
                         <div className="flex flex-row gap-4 items-center">
                             <Avatar>
                                 <AvatarImage src={headshot}></AvatarImage>
@@ -66,14 +66,14 @@ export default function Home() {
                                     />
                                 </Button>
                                 <Button variant="neutral" size="icon">
-                                    <MessageCircleIcon
-                                        size={64}
-                                        onClick={() =>
-                                            window.open(
-                                                'mailto:logs10658@gmail.com'
-                                            )
-                                        }
-                                    />
+                                        <MessageCircleIcon
+                                            size={64}
+                                            onClick={() =>
+                                                window.open(
+                                                    'mailto:logs10658@gmail.com'
+                                                )
+                                            }
+                                        />
                                 </Button>
                             </div>
                         </div>
@@ -108,9 +108,9 @@ export default function Home() {
                                 spare time - no details yet though!
                             </p>
                             <p className="text-lg">
-                                Currently, I'm seeking a{' '}
+                                Currently, I'm seeking an{' '}
                                 <span className="p-1 bg-bg rounded-base">
-                                    SWE internship for Summer 2025
+                                    internship for Summer 2025
                                 </span>
                                 . If you're interested, please take a look at my{' '}
                                 <a
