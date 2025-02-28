@@ -18,7 +18,7 @@ const entries: ProjectEntry[] = [
         image: localBitesImage,
         title: 'LocalBites - created for SparkHacks 2025',
         caption:
-            'Having trouble finding a place to eat? Try LocalBites!\n\n This web app gathers data from the Google Search and Google Places APIs to find delicious places to eat – all while prioritizing small businesses!\n\n',
+            'Having trouble finding a place to eat? Try LocalBites!\n\n This web app gathers data from the Google Search and Google Places APIs to find delicious places to eat – all while prioritizing small businesses!\n',
         link: 'https://github.com/loganlucas13/date-planner/tree/main',
         technologies: ['React', 'TypeScript', 'Python', 'Django'],
     },
@@ -62,7 +62,7 @@ export default function Experience() {
             <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
                 <Header></Header>
                 <div className="flex flex-col items-center justify-center gap-4">
-                    <Carousel className="flex flex-col w-full max-w-[455px] h-full justify-center">
+                    <Carousel className="flex flex-col max-w-[455px] h-full justify-center">
                         <CarouselContent>
                             {entries.map((entry, index) => (
                                 <CarouselItem key={index}>

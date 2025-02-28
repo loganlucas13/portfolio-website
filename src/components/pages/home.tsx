@@ -10,11 +10,11 @@ import headshot from '../../assets/imgs/headshot.jpg';
 
 export default function Home() {
     return (
-        <div className="min-h-screen w-screen">
+        <div className="flex flex-col min-h-screen w-screen items-center">
             <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
                 <Header></Header>
-                <div className="flex flex-col items-center justify-center">
-                    <div className="flex flex-col justify-center w-full sm:w-5/6 md:w-1/2 gap-10 p-8 bg-main border-2 border-border rounded-base shadow-shadow text-text">
+                <div className="flex flex-col items-center justify-center w-2/3 md:w-1/2">
+                    <div className="flex flex-col gap-10 p-8 bg-main border-2 border-border rounded-base shadow-shadow text-text">
                         <div className="flex flex-row gap-4 items-center">
                             <Avatar>
                                 <AvatarImage src={headshot}></AvatarImage>
@@ -66,23 +66,23 @@ export default function Home() {
                                     />
                                 </Button>
                                 <Button variant="neutral" size="icon">
-                                        <MessageCircleIcon
-                                            size={64}
-                                            onClick={() =>
-                                                window.open(
-                                                    'mailto:logs10658@gmail.com'
-                                                )
-                                            }
-                                        />
+                                    <MessageCircleIcon
+                                        size={64}
+                                        onClick={() =>
+                                            window.open(
+                                                'mailto:logs10658@gmail.com'
+                                            )
+                                        }
+                                    />
                                 </Button>
                             </div>
                         </div>
 
-                        <div className="flex flex-col px-4 py-2 gap-4 bg-bw border-2 border-border rounded-base shadow-shadow">
-                            <p className="text-lg font-semibold">
+                        <div className="flex flex-col px-4 py-2 gap-6 md:gap-4 bg-bw border-2 border-border rounded-base shadow-shadow">
+                            <p className="text-3xl md:text-lg font-semibold">
                                 Hi, I'm Logan.
                             </p>
-                            <p className="text-lg">
+                            <p className="text-2xl md:text-lg leading-9">
                                 I'm a current Junior studying Computer Science
                                 at the{' '}
                                 <a
@@ -93,23 +93,23 @@ export default function Home() {
                                     University of Illinois Chicago
                                 </a>
                                 , graduating in{' '}
-                                <span className="p-1 bg-bg rounded-base">
+                                <span className="p-[0.0625rem] bg-bg rounded-base">
                                     Spring 2026
                                 </span>
                                 .
                             </p>
-                            <p className="text-lg">
+                            <p className="text-2xl md:text-lg leading-9">
                                 I love all sorts of development, especially{' '}
-                                <span className="p-1 bg-bg rounded-base">
+                                <span className="p-[0.0625rem] bg-bg rounded-base">
                                     front-end and full-stack development
                                 </span>
                                 . I'm experimenting with new technologies all of
                                 the time, and I'm even developing a game in my
                                 spare time - no details yet though!
                             </p>
-                            <p className="text-lg">
+                            <p className="text-2xl md:text-lg leading-9">
                                 Currently, I'm seeking an{' '}
-                                <span className="p-1 bg-bg rounded-base">
+                                <span className="p-[0.0625rem] bg-bg rounded-base">
                                     internship for Summer 2025
                                 </span>
                                 . If you're interested, please take a look at my{' '}
@@ -122,7 +122,7 @@ export default function Home() {
                                 </a>
                                 .
                             </p>
-                            <p className="text-lg">
+                            <p className="text-2xl md:text-lg leading-9">
                                 Thank you so much for visiting, and I hope to be
                                 in touch soon!
                             </p>
