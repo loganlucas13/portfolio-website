@@ -27,7 +27,7 @@ export default function ImageCard({
                             {title}
                         </p>
                         <p
-                            className="pl-4 text-lg lg:text-base font-normal"
+                            className="pl-4 text-xl lg:text-base font-normal"
                             dangerouslySetInnerHTML={{
                                 __html: caption.replace(/\n/g, '<br/>'),
                             }}
