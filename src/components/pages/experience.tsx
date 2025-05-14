@@ -60,7 +60,6 @@ interface ProjectEntry {
 export default function Experience() {
     return (
         <>
-            <Background />
             <div className="min-h-screen w-screen">
                 <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
                     <Header></Header>
