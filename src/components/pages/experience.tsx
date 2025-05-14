@@ -1,5 +1,6 @@
 import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/header';
+import Background from '@/components/background';
 import {
     Carousel,
     CarouselContent,
@@ -58,45 +59,48 @@ interface ProjectEntry {
 
 export default function Experience() {
     return (
-        <div className="min-h-screen w-screen">
-            <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-                <Header></Header>
-                <div className="flex flex-col items-center justify-center gap-4">
-                    <Carousel className="flex flex-col max-w-[455px] h-full justify-center">
-                        <CarouselContent>
-                            {entries.map((entry, index) => (
-                                <CarouselItem key={index}>
-                                    <ProjectDisplay
-                                        image={entry.image}
-                                        title={entry.title}
-                                        caption={entry.caption}
-                                        link={entry.link}
-                                        technologies={entry.technologies}
-                                    />
-                                </CarouselItem>
-                            ))}
-                            <CarouselItem>
-                                <div className="items-center justify-center w-full bg-transparent border-border text-text p-4 pt-12">
-                                    <div className="items-center justify-center bg-bw border-2 border-border text-text p-4 rounded-base shadow-shadow text-center">
-                                        If you would like to see more of my
-                                        work, please go to my{' '}
-                                        <a
-                                            className="underline decoration-main decoration-2 underline-offset-2 hover:cursor-pointer"
-                                            href="https://github.com/loganlucas13"
-                                            target="_blank"
-                                        >
-                                            GitHub page
-                                        </a>
-                                        !
+        <>
+            <Background />
+            <div className="min-h-screen w-screen">
+                <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+                    <Header></Header>
+                    <div className="flex flex-col items-center justify-center gap-4">
+                        <Carousel className="flex flex-col max-w-[455px] h-full justify-center">
+                            <CarouselContent>
+                                {entries.map((entry, index) => (
+                                    <CarouselItem key={index}>
+                                        <ProjectDisplay
+                                            image={entry.image}
+                                            title={entry.title}
+                                            caption={entry.caption}
+                                            link={entry.link}
+                                            technologies={entry.technologies}
+                                        />
+                                    </CarouselItem>
+                                ))}
+                                <CarouselItem>
+                                    <div className="items-center justify-center w-full bg-transparent border-border text-text p-4 pt-12">
+                                        <div className="items-center justify-center bg-bw border-2 border-border text-text p-4 rounded-base shadow-shadow text-center">
+                                            If you would like to see more of my
+                                            work, please go to my{' '}
+                                            <a
+                                                className="underline decoration-main decoration-2 underline-offset-2 hover:cursor-pointer"
+                                                href="https://github.com/loganlucas13"
+                                                target="_blank"
+                                            >
+                                                GitHub page
+                                            </a>
+                                            !
+                                        </div>
                                     </div>
-                                </div>
-                            </CarouselItem>
-                        </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel>
-                </div>
-            </ThemeProvider>
-        </div>
+                                </CarouselItem>
+                            </CarouselContent>
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </Carousel>
+                    </div>
+                </ThemeProvider>
+            </div>
+        </>
     );
 }

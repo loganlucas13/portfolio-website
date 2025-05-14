@@ -22,7 +22,7 @@ export default function ImageCard({
             <figure className="w-fit lg:w-[450px] h-[750px] lg:h-fit overflow-hidden rounded-base border-2 border-border bg-main font-base lg:shadow-shadow">
                 <img className="w-full h-[330px]" src={imageUrl} alt="image" />
                 <figcaption className="flex border-t-2 text-text border-border p-4">
-                    <div className="flex flex-col h-[380px] lg:h-fit border-2 border-border bg-bw p-4 shadow-shadow rounded-base gap-2 leading-9">
+                    <div className="flex flex-col h-[380px] lg:h-fit border-2 border-border bg-bw p-4 shadow-shadow rounded-base gap-2 leading-9 transition-all">
                         <p className="text-3xl lg:text-base font-semibold">
                             {title}
                         </p>

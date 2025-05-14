@@ -10,21 +10,24 @@ export default function Header() {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const checkButtonHighlighting = (route: string) => {
-        return location.pathname === route ? 'highlighted' : 'neutral';
+    const getHighlightingVariant = (route: string) => {
+        if (location.pathname !== route) {
+            return 'neutral';
+        }
+        return theme === 'dark' ? 'highlighted_dark' : 'highlighted';
     };
 
     return (
         <div className="flex justify-center p-4 pb-32 lg:pb-8">
             <div className="flex flex-row bg-main p-4 gap-4 border-2 border-border rounded-base shadow-shadow">
                 <Button
-                    variant={checkButtonHighlighting('/')}
+                    variant={getHighlightingVariant('/')}
                     onClick={() => navigate('/')}
                 >
                     About me!
                 </Button>
                 <Button
-                    variant={checkButtonHighlighting('/experience')}
+                    variant={getHighlightingVariant('/experience')}
                     onClick={() => navigate('/experience')}
                 >
                     Experience

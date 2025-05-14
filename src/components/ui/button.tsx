@@ -19,6 +19,8 @@ const buttonVariants = cva(
                     'text-mtext bg-main border-2 border-border hover:translate-x-reverseBoxShadowX hover:translate-y-reverseBoxShadowY hover:shadow-shadow',
                 highlighted:
                     'text-text bg-bg border-2 border-border hover:cursor-default translate-x-boxShadowX translate-y-boxShadowY shadow-none',
+                highlighted_dark:
+                    'text-text bg-[#2e2e46] border-2 border-border hover:cursor-default translate-x-boxShadowX translate-y-boxShadowY shadow-none',
             },
             size: {
                 default: 'h-10 px-4 py-2',
