@@ -1,6 +1,5 @@
 import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/header';
-import Background from '@/components/background';
 import {
     Carousel,
     CarouselContent,
