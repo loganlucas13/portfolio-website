@@ -1,6 +1,5 @@
 import { ThemeProvider, useTheme } from '@/components/theme-provider';
 import Header from '@/components/header';
-import Background from '@/components/background';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { LinkedinIcon } from '@/components/ui/linkedin';
@@ -12,7 +11,6 @@ import headshot from '../../assets/imgs/headshot.jpg';
 export default function Home() {
     return (
         <>
-            <Background />
             <div className="flex flex-col min-h-screen w-screen items-center">
                 <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
                     <Header />
