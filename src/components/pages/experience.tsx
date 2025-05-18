@@ -17,7 +17,7 @@ import threeCardPokerImage from '../../assets/imgs/three-card-poker.png';
 const entries: ProjectEntry[] = [
     {
         image: fishAndFitnessImage,
-        title: 'Fish And Fitness',
+        title: 'Fish and Fitness',
         caption:
             'Unable to stay motivated with hitting your fitness goals? Be rewarded using Fish and Fitness!\n\n This companion app rewards you by filling out your collection of fish by reaching personalized goals. Integrated with the Strava API to retrieve up-to-date information anywhere, anytime!\n',
         link: 'https://github.com/loganlucas13/fish-and-fitness/tree/main',
