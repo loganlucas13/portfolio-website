@@ -8,12 +8,21 @@ import {
     CarouselPrevious,
 } from '@/components/ui/carousel';
 import ProjectDisplay from '@/components/project-display';
+import fishAndFitnessImage from '../../assets/imgs/fish-and-fitness.png';
 import localBitesImage from '../../assets/imgs/local-bites.png';
 import brokerXImage from '../../assets/imgs/broker-x.png';
 import webTunerImage from '../../assets/imgs/web-tuner.png';
 import threeCardPokerImage from '../../assets/imgs/three-card-poker.png';
 
 const entries: ProjectEntry[] = [
+    {
+        image: fishAndFitnessImage,
+        title: 'Fish And Fitness',
+        caption:
+            'Unable to stay motivated with hitting your fitness goals? Be rewarded using Fish and Fitness!\n\n This companion app rewards you by filling out your collection of fish by reaching personalized goals. Integrated with the Strava API to retrieve up-to-date information anywhere, anytime!\n',
+        link: 'https://github.com/loganlucas13/fish-and-fitness/tree/main',
+        technologies: ['React', 'Python', 'Django', 'SQL'],
+    },
     {
         image: localBitesImage,
         title: 'LocalBites - created for SparkHacks 2025',
