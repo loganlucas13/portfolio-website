@@ -33,7 +33,7 @@ export default function ImageCard({
                             }}
                         ></p>
                         <div className="flex flex-row justify-between mt-auto">
-                            <div className="flex flex-row gap-2 py-2 items-end self-end">
+                            <div className="flex flex-row flex-wrap gap-2 py-2 items-end self-end">
                                 {technologies.map((tech) => (
                                     <Badge key={tech} variant="neutral">
                                         {tech}
