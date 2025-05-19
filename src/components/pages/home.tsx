@@ -93,7 +93,7 @@ export const InnerHome = () => {
                             Hi, I'm Logan.
                         </p>
                         <p className="text-2xl md:text-lg leading-9">
-                            I'm a current Junior studying Computer Science at
+                            I'm a current Senior studying Computer Science at
                             the{' '}
                             <a
                                 className="underline decoration-main decoration-2 underline-offset-2 hover:cursor-pointer"
@@ -118,15 +118,21 @@ export const InnerHome = () => {
                                 front-end and full-stack development
                             </span>
                             . I'm experimenting with new technologies all of the
-                            time, and I'm even developing a game in my spare
-                            time - no details yet though!
+                            time, and I'm even working on multiple projects as
+                            you're reading this!
                         </p>
                         <p className="text-2xl md:text-lg leading-9">
                             Currently, I'm seeking an{' '}
                             <span
                                 className={`transition-all p-[0.0625rem] rounded-base ${textHighlighting}`}
                             >
-                                internship for Summer 2025
+                                internship
+                            </span>{' '}
+                            or{' '}
+                            <span
+                                className={`transition-all p-[0.0625rem] rounded-base ${textHighlighting}`}
+                            >
+                                full-time job for Spring/Summer 2026
                             </span>
                             . If you're interested, please take a look at my{' '}
                             <a
