@@ -115,7 +115,7 @@ export const InnerHome = () => {
                             <span
                                 className={`transition-all p-[0.0625rem] rounded-base ${textHighlighting}`}
                             >
-                                front-end and full-stack development
+                                full-stack and systems development
                             </span>
                             . I'm experimenting with new technologies all of the
                             time, and I'm even working on multiple projects as
