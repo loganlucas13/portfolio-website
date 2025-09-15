@@ -52,7 +52,7 @@ const entries: ProjectEntry[] = [
         title: 'Three Card Poker',
         caption:
             'Retro-themed three card poker implementation in Java.\n\n Two versions available - a local game for two players or a server-hosted version with support for many more!\n\n',
-        link: 'https://github.com/loganlucas13/three-card-poker/tree/main',
+        link: undefined,
         technologies: ['Java', 'JavaFX', 'CSS'],
     },
 ];
@@ -61,7 +61,7 @@ interface ProjectEntry {
     image: string;
     title: string;
     caption: string;
-    link: string;
+    link: string | undefined;
     technologies: string[];
 }
 

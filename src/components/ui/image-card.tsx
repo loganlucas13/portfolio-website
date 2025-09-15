@@ -6,7 +6,7 @@ type Props = {
     imageUrl: string;
     title: string;
     caption: string;
-    link: string;
+    link: string | undefined;
     technologies: string[];
 };
 
@@ -40,14 +40,16 @@ export default function ImageCard({
                                     </Badge>
                                 ))}
                             </div>
-                            <Button
-                                className="self-end text-text"
-                                size="icon"
-                                variant="neutral"
-                                onClick={() => window.open(link)}
-                            >
-                                <GithubIcon />
-                            </Button>
+                            {link && (
+                                <Button
+                                    className="self-end text-text"
+                                    size="icon"
+                                    variant="neutral"
+                                    onClick={() => window.open(link)}
+                                >
+                                    <GithubIcon />
+                                </Button>
+                            )}
                         </div>
                     </div>
                 </figcaption>
