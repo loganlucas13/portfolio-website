@@ -4,7 +4,7 @@ interface props {
     image?: string;
     title: string;
     caption: string;
-    link: string;
+    link: string | undefined;
     technologies: string[];
 }
 
