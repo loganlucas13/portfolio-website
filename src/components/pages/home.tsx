@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { ThemeProvider, useTheme } from '@/components/theme-provider';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/header';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -9,8 +11,38 @@ import { BookTextIcon } from '@/components/ui/book-text';
 import headshot from '../../assets/imgs/headshot.jpg';
 
 export default function Home() {
+    // in case document title doesn't automatically get set by Helmet (strange, but this fixes it!)
+    useEffect(() => {
+        document.title = 'Logan Lucas | Full-Stack Developer';
+    }, []);
+
     return (
         <>
+            <Helmet>
+                <title>Logan Lucas | Full-Stack Developer</title>
+                <meta
+                    name="description"
+                    content="Portfolio website of Logan Lucas, Full-Stack developer in Chicago."
+                />
+                <meta
+                    name="keywords"
+                    content="Logan Lucas, full-stack developer, software engineer, portfolio, React, TypeScript, JavaScript, Chicago, Illinois"
+                />
+                <link rel="canonical" href="https://loganlucas.dev/" />
+
+                <meta
+                    property="og:title"
+                    content="Logan Lucas | Full-Stack Developer"
+                />
+                <meta
+                    property="og:description"
+                    content="Full Stack Developer located in Chicago. View projects and experience."
+                />
+                <meta property="og:image" content="/headshot.jpg" />
+                <meta property="og:url" content="https://loganlucas.dev/" />
+                <meta property="og:type" content="website" />
+            </Helmet>
+
             <div className="flex flex-col min-h-screen w-screen items-center">
                 <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
                     <Header />

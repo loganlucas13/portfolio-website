@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/header';
 import {
     Carousel,
@@ -66,8 +68,41 @@ interface ProjectEntry {
 }
 
 export default function Experience() {
+    // in case document title doesn't automatically get set by Helmet (strange, but this fixes it!)
+    useEffect(() => {
+        document.title = 'Logan Lucas | Experience';
+    }, []);
+
     return (
         <>
+            <Helmet>
+                <title>Logan Lucas | Experience</title>
+                <meta
+                    name="description"
+                    content="Portfolio website of Logan Lucas, Full-Stack developer in Chicago."
+                />
+                <meta
+                    name="keywords"
+                    content="Logan Lucas, full-stack developer, software engineer, portfolio, React, TypeScript, JavaScript, Chicago, Illinois"
+                />
+                <link
+                    rel="canonical"
+                    href="https://loganlucas.dev/experience"
+                />
+
+                <meta property="og:title" content="Logan Lucas | Experience" />
+                <meta
+                    property="og:description"
+                    content="Full Stack Developer located in Chicago. View projects and experience."
+                />
+                <meta property="og:image" content="/headshot.jpg" />
+                <meta
+                    property="og:url"
+                    content="https://loganlucas.dev/experience"
+                />
+                <meta property="og:type" content="website" />
+            </Helmet>
+
             <div className="min-h-screen w-screen">
                 <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
                     <Header></Header>
