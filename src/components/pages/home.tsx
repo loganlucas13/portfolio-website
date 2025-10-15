@@ -147,38 +147,14 @@ export const InnerHome = () => {
                             <span
                                 className={`transition-all p-[0.0625rem] rounded-base ${textHighlighting}`}
                             >
-                                full-stack and systems development
+                                full-stack, frontend, and systems development
                             </span>
                             . I'm experimenting with new technologies all of the
                             time, and I'm even working on multiple projects as
                             you're reading this!
                         </p>
                         <p className="text-2xl md:text-lg leading-9">
-                            Currently, I'm seeking an{' '}
-                            <span
-                                className={`transition-all p-[0.0625rem] rounded-base ${textHighlighting}`}
-                            >
-                                internship
-                            </span>{' '}
-                            or{' '}
-                            <span
-                                className={`transition-all p-[0.0625rem] rounded-base ${textHighlighting}`}
-                            >
-                                full-time job for Spring/Summer 2026
-                            </span>
-                            . If you're interested, please take a look at my{' '}
-                            <a
-                                className="underline decoration-main decoration-2 underline-offset-2 hover:cursor-pointer"
-                                href="/documents/Logan_Lucas_resume.pdf"
-                                target="_blank"
-                            >
-                                resume
-                            </a>
-                            .
-                        </p>
-                        <p className="text-2xl md:text-lg leading-9">
-                            Thank you so much for visiting, and I hope to be in
-                            touch soon!
+                            Thank you so much for visiting!
                         </p>
                     </div>
                 </div>

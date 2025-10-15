@@ -1,7 +1,7 @@
 <div align="center">
   <img src="public/code.svg" width="64" height="64">
   <h1>
-    <a href="https://loganlucas.dev" target="_blank">loganlucas.dev</a> - version 2.0.0
+    <a href="https://loganlucas.dev" target="_blank">loganlucas.dev</a> - version 2.0.1
   </h1>
 </div>
 
@@ -25,7 +25,7 @@ Visit the live website <a href="https://loganlucas.dev" target="_blank">here</a>
 
 #### 📔 About me!
 
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/7596a410-0c79-44fb-95b7-0a807deb1f48" />
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f428df29-a6ef-4bf7-9e63-0aec6946b831" />
 
 #### 🖋️ Experience
 
