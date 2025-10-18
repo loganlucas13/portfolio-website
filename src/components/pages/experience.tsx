@@ -38,7 +38,7 @@ const entries: ProjectEntry[] = [
         title: 'BrokerX',
         caption:
             'Your new personal stock assistant.\n\n Gathers data in real time from social media websites, displaying an up-to-date sentiment analysis on any stock.\n\n\n',
-        link: 'https://github.com/loganlucas13/broker-x/tree/main',
+        link: undefined,
         technologies: ['React', 'TypeScript', 'Go'],
     },
     {
